@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>/</id>
+	<title>My Blog</title>
+	<link rel="self" href="/" />
+	<rights>Copyright © 2023</rights>
+	<updated>2023-12-13T15:38:37Z</updated>
+	<entry>
+		<id>/posts/example</id>
+		<title>This Is An Example Post</title>
+		<link href="/posts/example" />
+		<updated>2014-12-13T00:00:00Z</updated>
+	</entry>
+</feed>
