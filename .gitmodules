@@ -1,0 +1,3 @@
+[submodule "src/Blog/theme"]
+	path = src/Blog/theme
+	url = https://github.com/statiqdev/CleanBlog.git
