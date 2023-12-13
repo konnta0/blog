@@ -400,3 +400,4 @@ FodyWeavers.xsd
 src/.DS_Store
 src/Blog/output
 src/Blog/cache
+src/Blog/.DS_Store
