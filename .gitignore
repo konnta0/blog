@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 .idea
 src/.DS_Store
+src/Blog/output
+src/Blog/cache
