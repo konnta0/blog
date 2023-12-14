@@ -8,13 +8,20 @@ on:
 jobs:
   build_and_deploy_job:
     runs-on: ubuntu-latest
-    environment: prod
+    #environment: prod
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+
+      - name: Build .Net 8.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+      - run: |
+          dotnet build --configuration Release --no-restore
 
       - name: Build And Deploy
         id: builddeploy
@@ -25,7 +32,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "src/Blog" # App source code path
+          app_location: "src/Blog/output" # App source code path
           api_location: "Api" # Api source code path - optional
-          output_location: "src/Blog/output" # Built app content directory - optional
+          output_location: "src" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
