@@ -7,8 +7,8 @@ on:
 
 jobs:
   build_and_deploy_job:
-    environment: prod
     runs-on: ubuntu-latest
+    environment: prod
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
@@ -27,5 +27,5 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "src/Blog" # App source code path
           api_location: "Api" # Api source code path - optional
-          output_location: "output" # Built app content directory - optional
+          output_location: "src/Blog/output" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
