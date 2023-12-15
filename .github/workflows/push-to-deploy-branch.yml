@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
       - name: push
-        run: |
+      - uses: actions/checkout@v4
+        with: 
+          token: ${{ secret.GH_PAT }}
+  
+      - run: |
           git push -f origin ${{ github.ref_name }}:deploy/prod
