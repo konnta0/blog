@@ -1,0 +1,14 @@
+name: push to deploy branch
+on:
+  workflow_dispatch:
+
+
+jobs:
+  push-to-deploy-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: push
+        run: |
+          git push -f oigin ${{ gihub.ref_name }}:deploy/prod
