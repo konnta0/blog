@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: push
         run: |
-          git push -f oigin ${{ gihub.ref_name }}:deploy/prod
+          git push -f oigin ${{ github.ref_name }}:deploy/prod
