@@ -28,7 +28,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Output
-        run: dotnet run -- deploy
+        run: dotnet run --project ./src/Blog/Blog.csproj -- deploy
 
       - name: Build And Deploy
         id: builddeploy
