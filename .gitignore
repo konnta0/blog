@@ -401,4 +401,4 @@ src/.DS_Store
 src/Blog/output/*
 !src/Blog/output/.gitkeep
 src/Blog/cache
-src/Blog/.DS_Store
+.DS_Store
